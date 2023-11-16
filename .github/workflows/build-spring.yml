@@ -1,0 +1,19 @@
+name: Build & Deploy Spring Application
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-deploy-spring:
+    name: Build and Deploy Spring Application
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '17'
+      - name: Build Java & Deploy
+        run: mvn clean deploy
