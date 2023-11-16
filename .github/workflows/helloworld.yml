@@ -1,0 +1,20 @@
+name: Helle World
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  hello-world:
+    name: Hello World Job
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
+  goodbye-world:
+    name: Bye Job
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Bye World
+        run: echo "Good bye World"
