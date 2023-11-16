@@ -10,6 +10,8 @@ jobs:
     name: Hello World Job
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
       - name: Hello World
         run: echo "Hello World"
   goodbye-world:
