@@ -16,4 +16,6 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '17'
       - name: Build Java & Deploy
-        run: mvn clean deploy
+        run: mvn clean deploy#
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
